@@ -1,19 +1,25 @@
 def solution(n):
-    answer = 0
-    result_list = []
-    list_num = [4,1,2]
-    share = n//3
-    rest = n%3
-    
-    while share // 3 == 0:
-        result_list.append(rest)
-        n = share // 3
-    
-    for i in 
-        
-        
-        if rest == 0:
-            result = str((share-1)*10+list_num[0])
+    answer = ''
+    while n:
+        if n % 3:
+            answer += str(n % 3)
+            n //= 3
         else:
-            result = str(share*10+list_num[rest])
-        return result
+            answer += "4"
+            n = n//3 - 1
+    return answer[::-1]
+
+
+''' 다른 사람의 풀이
+def change124(n):
+    num = ['1','2','4']
+    answer = ""
+
+
+    while n > 0:
+        n -= 1
+        answer += num[n % 3]
+        n //= 3
+
+    return answer
+'''
