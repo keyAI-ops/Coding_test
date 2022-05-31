@@ -1,5 +1,3 @@
-from datetime import datetime
-
 def solution(m, musicinfos):
     info = []
     info_time = []
