@@ -1,3 +1,4 @@
+# 풀이
 def solution(n):
     answer = ''
     while n:
